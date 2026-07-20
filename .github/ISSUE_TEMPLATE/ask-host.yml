@@ -2,20 +2,15 @@ name: "❓ Ask the Host"
 description: "Submit a question to the host and you might get an answer on the next episode."
 title: "[ASK HOST] "
 labels:
-  - "call-in: question"
+  - "question"
 body:
-- type: markdown
-    attributes:
-      value: |
-        
-
-  - type: input
-    id: caller-name
-    attributes:
-      label: Name
-      placeholder: "Confused in Cleveland"
+- type: input
+  id: caller-name
+  attributes:
+    label: Name
+    placeholder: "Confused in Cleveland"
     validations:
-      required: true
+    required: true
 
   - type: dropdown
     id: topic
