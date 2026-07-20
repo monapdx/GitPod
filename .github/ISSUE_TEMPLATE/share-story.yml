@@ -1,0 +1,38 @@
+name: "Share a Story"
+description: "Have a hot take on something we covered?"
+title: "[STORY]"
+labels:
+  - "story"
+body:
+- type: input
+  id: name
+  attributes:
+    label: "Name:"
+  validations:
+    required: true
+- type: dropdown
+  id: topic
+  attributes:
+    label: "Topic"
+    options:
+      - "Topic #1"
+      - "Topic #2"
+      - "Topic #3"
+      - "Topic #4"
+  validations:
+    required: true
+- type: textarea
+  id: story
+  attributes:
+    label: "Your Story:"
+    placeholder: "Enter your personal story here..."
+  validations:
+    required: true
+- type: checkboxes
+  id: permission
+  attributes:
+    label: "Permission:"
+    options:
+      - label: "By submitting this form, you give the host and the show full permission to use it in an episode at their sole discretion."
+  validations:
+    required: true

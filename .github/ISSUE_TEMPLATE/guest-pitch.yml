@@ -1,0 +1,42 @@
+name: "Guest Pitch"
+description: "Think you'd be a good guest to have on the show?"
+title: "[GUEST PITCH]"
+labels:
+  - "guest-pitch"
+body:
+- type: input
+  id: name
+  attributes:
+    label: "Name:"
+    placeholder: "Enter your name here"
+  validations:
+    required: true
+- type: input
+  id: expertise
+  attributes:
+    label: "Credentials:"
+    placeholder: "Degrees, certifications, experience"
+  validations:
+    required: true
+- type: textarea
+  id: about
+  attributes:
+    label: "Tell us about yourself:"
+    placeholder: "Personal, professional, anything you think we might find interesting"
+  validations:
+    required: true
+- type: textarea
+  id: reason
+  attributes:
+    label: "Why would you be a great guest for the show?"
+    placeholder: "Give us more than one reason!"
+  validations:
+    required: true
+- type: checkboxes
+  id: permission
+  attributes:
+    label: "Permission:"
+    options:
+      - label: "By submitting this form, you give the host and the show full permission to use it in an episode at their sole discretion."
+  validations:
+    required: true
