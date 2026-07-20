@@ -1,0 +1,41 @@
+name: "👍🏻 Send Support"
+description: "Send us messages of encouragement, inspiration, and other feedback"
+title: "[SUPPORTER] "
+labels:
+  - "call-in: supporter"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        
+
+  - type: input
+    id: caller-name
+    attributes:
+      label: Name
+      placeholder: ""
+    validations:
+      required: true
+
+  - type: textarea
+    id: praise
+    attributes:
+      label: Your message
+      placeholder: ""
+    validations:
+      required: true
+
+  - type: textarea
+    id: testimony
+    attributes:
+      label: How has the show affected you?
+      description: 
+
+  - type: checkboxes
+    id: permission
+    attributes:
+      label: Permission
+      options:
+        - label: By submitting this form, you give the host and the show full permission to use it in an episode at their sole discretion.
+          required: true
+

@@ -1,0 +1,53 @@
+name: "📫 Pitch Yourself as a Guest"
+description: "Think you'd be a good guest on the show?"
+title: "[GUEST PITCH] "
+labels:
+  - "call-in: guest pitch"
+body:
+  - type: markdown
+    attributes:
+      value: |
+
+  - type: input
+    id: guest-name
+    attributes:
+      label: Guest name
+      placeholder: "Dr. Evan Reason"
+    validations:
+      required: true
+
+  - type: input
+    id: credentials
+    attributes:
+      label: Credentials
+      description: 
+      placeholder: ""
+
+  - type: dropdown
+    id: topic
+    attributes:
+      label: What topic do you want to discuss?
+      options:
+        - Topic #1
+        - Topic #2
+        - Topic #3
+        - Topic #4
+    validations:
+      required: true
+
+  - type: textarea
+    id: pitch
+    attributes:
+      label: Why should we have you as a guest?
+      placeholder: ""
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: permission
+    attributes:
+      label: Permission
+      options:
+        - label: By submitting this form, you give the host and the show full permission to use it in an episode at their sole discretion.
+          required: true
+
