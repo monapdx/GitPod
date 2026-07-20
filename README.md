@@ -1,4 +1,7 @@
-# Name of Podcast
+<h1 align="center">Name of Podcast</h1>
+
+<p align="center"><img src="./assets/blue-speaker.gif" width="70"> <img src="./assets/blue-keyboard.gif" width="70"> <img src="./assets/liberty-blue.gif" width="70"> <img src="./assets/paper-plane.gif" width="70"></p>
+
 
 ## A Message From the Host
 
