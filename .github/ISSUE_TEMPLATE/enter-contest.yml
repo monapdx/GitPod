@@ -1,0 +1,35 @@
+name: "🎁 Enter Contest"
+description: "Fill out this form to enter our weekly contest. The winner gets a live call from the host and a $250 VISA gift card."
+title: "[CONTEST ENTRY]"
+labels:
+  - "contest"
+body:
+- type: input
+  id: name
+  attributes:
+    label: "Name:"
+    placeholder: "Enter your name"
+  validations:
+    required: true
+- type: input
+  id: email
+  attributes:
+    label: "Email:"
+    placeholder: "Enter your email address here"
+  validations:
+    required: true
+- type: textarea
+  id: message
+  attributes:
+    label: "What would you like to say to the hos if you are the winner?"
+    placeholder: "Enter your message here"
+  validations:
+    required: true
+- type: checkboxes
+  id: permission
+  attributes:
+    label: "Permission"
+    options:
+      - label: "By submitting this form you agree to only enter each weekly contest one time, and give the show permission to read your message on air at their sole discretion."
+  validations:
+    required: true
