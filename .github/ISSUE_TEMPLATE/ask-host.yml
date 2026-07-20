@@ -4,7 +4,7 @@ title: "[ASK HOST] "
 labels:
   - "call-in: question"
 body:
-  - type: markdown
+- type: markdown
     attributes:
       value: |
         
