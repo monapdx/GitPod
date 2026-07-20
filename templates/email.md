@@ -1,13 +1,20 @@
 |              |             |
 | ------------ | ----------- |
-| **From:**    | %%FROM%%    |
-| **To:**      | %%TO%%      |
-| **Subject:** | %%SUBJECT%% |
+| **From:**    | Some Body, Executive Producer `<producer@podcast.com>`    |
+| **To:**      | John Smith, Host `<host@podcast.com>`      |
+| **Subject:** | Fwd: [QUESTION] Title of Question |
+
 
 ```text
-%%BODY%%
+Greetings,
+
+Just received this Question Submission a few minutes ago.
+
+What are your thoughts?
 ```
 
-| ATTACHMENTS | SIZE |
-|---|---:|
-| %%ATTACHMENT%% | %%SIZE%% |
+
+
+**Talk later**,
+
+**Some Body** | *Executive Producer*
