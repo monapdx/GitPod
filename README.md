@@ -4,7 +4,14 @@
 
 <img align="left" src="./assets/mic.gif" width="100"><p align="left">My name is **Host Name**, and I'm the creator and host of *Podcast Name*.
 
-There are lots of ways to interact with the show! You can **❓[submit a question](https://github.com/monpadx/GitPod/issues/new?template=ask-host.yml)** to the host, share a **📖[personal story](https://github.com/monpadx/GitPod/issues/new?template=share-story.yml)** about a topic we cover, **📬[pitch a guest](https://github.com/monpadx/GitPod/issues/new?template=guest-pitch.yml)**, and enter our **🎁[weekly giveaway contest](https://github.com/monpadx/GitPod/issues/new?template=enter-contest.yml)**!
+There are lots of ways to interact with the show! 
+
+## Get in Touch:
+
+- **❓[submit a question](https://github.com/monpadx/GitPod/issues/new?template=ask-host.yml)** to the host 
+- Share a **📖[personal story](https://github.com/monpadx/GitPod/issues/new?template=share-story.yml)** about a topic we cover 
+- **📬[pitch a guest](https://github.com/monpadx/GitPod/issues/new?template=guest-pitch.yml)** 
+- Enter our **🎁[weekly giveaway contest](https://github.com/monpadx/GitPod/issues/new?template=enter-contest.yml)**!
 
 ---
 ## Content Warning
