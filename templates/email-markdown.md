@@ -25,7 +25,9 @@ Body of email goes here.
 
 
 -First Last
+
 **Title/Position**
+
 *Name of Show*
 
 
