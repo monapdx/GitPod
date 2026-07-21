@@ -1,5 +1,3 @@
-Good additions. I'd actually separate those into a **"Writing Episodes"** section, since that's the one place where the workflow differs from what people might expect.
-
 # Using GitHub as a Fictional Podcast Platform
 
 GitPod transforms a standard GitHub repository into the production infrastructure for a fictional podcast. Instead of using GitHub to manage software, you'll use its built-in features to manage episodes, audience interaction, publishing, and your show's public website.
@@ -140,4 +138,3 @@ Inside it you'll find everything needed to run your show:
 
 GitPod provides the infrastructure so you can focus on creating believable stories and engaging with your fictional audience.
 
-One small suggestion: I'd rename **"Interview Episode Generator"** to **"Interview Episode Builder."** "Builder" better matches the rest of GitPod's philosophy—it constructs the finished HTML framework for you rather than merely generating text.
