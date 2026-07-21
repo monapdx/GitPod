@@ -11,10 +11,10 @@ There are lots of ways to interact with the show!
 
 ## Get in Touch:
 
-- **❓[submit a question](https://github.com/monpadx/GitPod/issues/new?template=ask-host.yml)** to the host 
-- Share a **📖[personal story](https://github.com/monpadx/GitPod/issues/new?template=share-story.yml)** about a topic we cover 
-- **📬[pitch a guest](https://github.com/monpadx/GitPod/issues/new?template=guest-pitch.yml)** 
-- Enter our **🎁[weekly giveaway contest](https://github.com/monpadx/GitPod/issues/new?template=enter-contest.yml)**!
+- **❓[submit a question](https://github.com/monapdx/GitPod/issues/new?template=ask-host.yml)** to the host 
+- Share a **📖[personal story](https://github.com/monapdx/GitPod/issues/new?template=share-story.yml)** about a topic we cover 
+- **📬[pitch a guest](https://github.com/monapdx/GitPod/issues/new?template=guest-pitch.yml)** 
+- Enter our **🎁[weekly giveaway contest](https://github.com/monapdx/GitPod/issues/new?template=enter-contest.yml)**!
 
 ---
 ## Content Warning
