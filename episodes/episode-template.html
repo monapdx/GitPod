@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Episode description goes here."
+  >
+
+  <title>Episode 01: Episode Title | Podcast Name</title>
+
+  <style>
+    :root {
+      --background: #f4f1e8;
+      --surface: #ffffff;
+      --text: #181818;
+      --muted-text: #5d5d5d;
+
+      --primary: #5158ff;
+      --secondary: #ff5c8a;
+      --accent: #ffd84d;
+
+      --border: #181818;
+      --shadow: 6px 6px 0 #181818;
+
+      --content-width: 850px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+      font-size: 18px;
+      line-height: 1.75;
+    }
+
+    a {
+      color: inherit;
+      font-weight: 700;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 4px;
+    }
+
+    a:hover {
+      background: var(--accent);
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .site-header {
+      padding: 18px 24px;
+      background: var(--primary);
+      border-bottom: 4px solid var(--border);
+    }
+
+    .site-header__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      max-width: var(--content-width);
+      margin: 0 auto;
+    }
+
+    .site-title {
+      margin: 0;
+      color: #ffffff;
+      font-size: 1.1rem;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .site-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .site-nav a {
+      color: #ffffff;
+      font-size: 0.85rem;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .episode {
+      width: min(
+        calc(100% - 32px),
+        var(--content-width)
+      );
+      margin: 48px auto;
+    }
+
+    /*
+      MARKDOWN:
+      # Episode Title
+
+      HTML:
+      <h1>Episode Title</h1>
+    */
+
+    h1 {
+      margin: 0;
+      padding: 28px;
+      background: var(--secondary);
+      border: 4px solid var(--border);
+      box-shadow: var(--shadow);
+      font-size: clamp(2.4rem, 8vw, 4.8rem);
+      font-weight: 900;
+      line-height: 0.98;
+      letter-spacing: -0.045em;
+      text-transform: uppercase;
+    }
+
+    /*
+      MARKDOWN:
+      ## Major Section
+
+      HTML:
+      <h2>Major Section</h2>
+    */
+
+    h2 {
+      margin: 64px 0 24px;
+      padding: 14px 18px;
+      background: var(--primary);
+      color: #ffffff;
+      border: 4px solid var(--border);
+      box-shadow: 4px 4px 0 var(--border);
+      font-size: clamp(1.55rem, 5vw, 2.4rem);
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+    }
+
+    /*
+      MARKDOWN:
+      ### Smaller Subsection
+
+      HTML:
+      <h3>Smaller Subsection</h3>
+    */
+
+    h3 {
+      display: inline-block;
+      margin: 42px 0 14px;
+      padding: 7px 12px;
+      background: var(--accent);
+      border: 3px solid var(--border);
+      font-size: clamp(1.15rem, 4vw, 1.55rem);
+      font-weight: 900;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+
+    p {
+      margin: 0 0 1.35em;
+    }
+
+    .episode-number {
+      display: inline-block;
+      margin-bottom: 16px;
+      padding: 7px 12px;
+      background: var(--accent);
+      border: 3px solid var(--border);
+      font-size: 0.85rem;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .episode-meta {
+      display: grid;
+      grid-template-columns:
+        repeat(auto-fit, minmax(150px, 1fr));
+      gap: 12px;
+      margin: 24px 0 42px;
+    }
+
+    .meta-item {
+      padding: 14px;
+      background: var(--surface);
+      border: 3px solid var(--border);
+    }
+
+    .meta-label {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--muted-text);
+      font-size: 0.72rem;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .meta-value {
+      display: block;
+      font-weight: 700;
+    }
+
+    .episode-intro {
+      margin: 36px 0;
+      padding: 24px;
+      background: var(--surface);
+      border: 4px solid var(--border);
+      border-left: 14px solid var(--secondary);
+      box-shadow: var(--shadow);
+      font-size: 1.1rem;
+      font-weight: 700;
+    }
+
+    blockquote {
+      margin: 32px 0;
+      padding: 20px 24px;
+      background: var(--accent);
+      border: 4px solid var(--border);
+      box-shadow: 5px 5px 0 var(--border);
+      font-size: 1.15rem;
+      font-weight: 700;
+    }
+
+    blockquote p:last-child {
+      margin-bottom: 0;
+    }
+
+    hr {
+      margin: 54px 0;
+      border: 0;
+      border-top: 4px solid var(--border);
+    }
+
+    ul,
+    ol {
+      margin: 0 0 1.5em;
+      padding-left: 1.6em;
+    }
+
+    li {
+      margin-bottom: 0.55em;
+    }
+
+    strong {
+      font-weight: 900;
+    }
+
+    code {
+      padding: 2px 6px;
+      background: var(--accent);
+      border: 2px solid var(--border);
+      font-family:
+        "Courier New",
+        monospace;
+      font-size: 0.9em;
+    }
+
+    .content-warning {
+      margin: 32px 0;
+      padding: 20px;
+      background: #ffffff;
+      border: 4px solid var(--border);
+      border-top: 12px solid var(--secondary);
+    }
+
+    .content-warning__title {
+      margin: 0 0 8px;
+      font-size: 0.85rem;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .content-warning p:last-child {
+      margin-bottom: 0;
+    }
+
+    .episode-footer {
+      margin-top: 64px;
+      padding-top: 24px;
+      border-top: 4px solid var(--border);
+    }
+
+    .episode-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 16px;
+      background: var(--accent);
+      border: 3px solid var(--border);
+      box-shadow: 3px 3px 0 var(--border);
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .button:hover {
+      box-shadow: 1px 1px 0 var(--border);
+      transform: translate(2px, 2px);
+    }
+
+    .site-footer {
+      margin-top: 64px;
+      padding: 26px 20px;
+      background: var(--text);
+      color: #ffffff;
+      text-align: center;
+      font-size: 0.85rem;
+    }
+
+    .site-footer p {
+      margin: 0;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        font-size: 16px;
+      }
+
+      .site-header__inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .episode {
+        margin-top: 28px;
+      }
+
+      h1 {
+        padding: 20px;
+      }
+
+      h2 {
+        margin-top: 48px;
+      }
+
+      .episode-intro {
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+
+      <p class="site-title">
+        Podcast Name
+      </p>
+
+      <nav
+        class="site-nav"
+        aria-label="Main navigation"
+      >
+        <a href="../index.html">Episodes</a>
+        <a href="../about.html">About</a>
+        <a href="https://github.com/USERNAME/REPOSITORY/issues">
+          Contact
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="episode">
+
+    <span class="episode-number">
+      Episode 01
+    </span>
+
+    <!-- Markdown equivalent: # Episode Title -->
+    <h1>Episode Title Goes Here</h1>
+
+    <div class="episode-meta">
+
+      <div class="meta-item">
+        <span class="meta-label">Published</span>
+        <span class="meta-value">Month 00, 2026</span>
+      </div>
+
+      <div class="meta-item">
+        <span class="meta-label">Hosted by</span>
+        <span class="meta-value">Host Name</span>
+      </div>
+
+      <div class="meta-item">
+        <span class="meta-label">Episode type</span>
+        <span class="meta-value">Solo Episode</span>
+      </div>
+
+    </div>
+
+    <div class="content-warning">
+      <p class="content-warning__title">
+        Content Warning
+      </p>
+
+      <p>
+        Add any relevant content warnings here, or remove
+        this section when it is not needed.
+      </p>
+    </div>
+
+    <div class="episode-intro">
+      Write a brief introduction or episode summary here.
+      This can explain the subject of the episode and give
+      readers an idea of what to expect.
+    </div>
+
+    <!-- Markdown equivalent: ## Opening -->
+    <h2>Opening</h2>
+
+    <p>
+      Begin the episode here. This layout is intended for
+      essays, monologues, scripted commentary, documentary
+      episodes, narrative episodes, or other formats that
+      do not need interview-style chat bubbles.
+    </p>
+
+    <p>
+      Add additional paragraphs normally. The page remains
+      narrow enough for comfortable reading while preserving
+      the bold visual style of the interview template.
+    </p>
+
+    <!-- Markdown equivalent: ### A Smaller Point -->
+    <h3>A Smaller Point</h3>
+
+    <p>
+      Use level-three headings for smaller topics contained
+      within a major section.
+    </p>
+
+    <blockquote>
+      <p>
+        Blockquotes can be used for listener submissions,
+        excerpts, quoted material, or important statements.
+      </p>
+    </blockquote>
+
+    <!-- Markdown equivalent: ## Main Discussion -->
+    <h2>Main Discussion</h2>
+
+    <p>
+      Continue the main episode content here.
+    </p>
+
+    <!-- Markdown equivalent: ### Supporting Context -->
+    <h3>Supporting Context</h3>
+
+    <p>
+      Add supporting details, examples, fictional research,
+      production notes, or narrative context.
+    </p>
+
+    <ul>
+      <li>Use lists when they improve readability.</li>
+      <li>Keep each major idea in its own section.</li>
+      <li>Use headings in the same order as Markdown.</li>
+    </ul>
+
+    <!-- Markdown equivalent: ## Closing -->
+    <h2>Closing</h2>
+
+    <p>
+      Write the closing statement, credits, call to action,
+      or preview of the next episode here.
+    </p>
+
+    <footer class="episode-footer">
+
+      <p>
+        <strong>Thanks for listening.</strong>
+        Add credits, sources, production notes, or links here.
+      </p>
+
+      <div class="episode-actions">
+        <a
+          class="button"
+          href="../index.html"
+        >
+          All Episodes
+        </a>
+
+        <a
+          class="button"
+          href="PREVIOUS-EPISODE.html"
+        >
+          Previous Episode
+        </a>
+
+        <a
+          class="button"
+          href="NEXT-EPISODE.html"
+        >
+          Next Episode
+        </a>
+      </div>
+
+    </footer>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      © 2026 Podcast Name. This is a fictional podcast.
+    </p>
+  </footer>
+
+</body>
+</html>
